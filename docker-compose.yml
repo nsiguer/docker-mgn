@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mn-mgn:
+    image: mgn
+    container_name: mn-mgn
+    build:
+      context: .
+    ports:
+      - 57821:57821/tcp
+    volumes:
+      - $PWD/.magnacoin:/root/.MagnaCoin
